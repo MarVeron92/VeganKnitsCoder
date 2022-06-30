@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat' , sans-serif;
+}
+
+/*selectores de etiqueta*/
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: rgb(176, 194, 242);
+    background-attachment: fixed;
+}
+
+nav{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+    nav img{
+        width: 200px;
+    }
+
+    nav ul{
+        display:flex
+    }
+
+        nav ul li{
+            display: inline-block;
+            margin: 20px 10px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            font-weight: 600;
+        }
+header
+{
+    text-align: center;
+}
+
+header img{
+    margin-top: 10px;
+    width: 96%;
+    height: 350px;
+}
+
+
+h3{
+    font-size: 2rem;
+    color: white;
+    padding: 2%;
+    text-align: center;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: static;
+    padding: 4px 30px;
+}
+
+.headerimgSize{
+    width: 90%;
+    height: 100%;
+}
+
+.iframeimgSize
+{
+    width: 90%;
+    height: 100%;
+}
+
+.mailSize
+{
+    height: 50px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* selector ID */
+
+#textFooter{
+    font-size: 15px;
+    color: white;
+    margin: 20px 50px;
+}
+
+
+
+/* selector clase */
+
+/*contenedor index*/
+.contenedorGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+/*contenedor de galerias*/
+
+.contenedorLana{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav{
+    grid-area: nav;
+}
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+}
+
+.textCenter{
+    text-align:center;
+}
+
+.textLeft{
+    text-align: left;
+}
+
+.textBold{
+    font-weight: 600;
+    font-size: 25px; 
+}
+
+.textBoldsmall{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.textRegular{
+    font-weight: 500;
+}
+.textWhite{
+    color: white
+}
+
+.textBlack{
+    color: black;
+}
+
+.bgGreen{
+    background-color: rgb(176, 242, 194)
+}
+.bgLila{
+    background-color: rgb(176, 194, 242);
+}
+.bgYellow{
+    background-color: rgb(253, 254, 224);
+}
+
+.bgBlack{
+    background-color: black;
+}
+
+.boxEncabezado{
+    background-color: rgb(176, 242, 194);
+    height: auto;
+    margin: auto;
+    padding: 15px;
+}
+
+.boxContacto{
+    padding: 50px 50px;
+    }
+    section p{
+        font-size: 1.8rem;
+        line-height: 2rem;
+}
+
+.margin
+{
+    margin-top: 50px;
+}
+
+    section p{
+        font-size: 1.8rem;
+        line-height: 2rem;
+}
+
+.marginTop{
+    margin-top: 50px;
+}
+
+.marginIcon{
+    margin: 10%;
+    margin-left: 20%;
+}
+
+.marginContact{
+    margin-top: 20px;
+}
+
+.textsizeContact{
+    font-size: 20px;
+}
+
+.caja{
+    margin: 25px;
+}
+
+/*transiciones y transformaciones*/
+
+.gradiente{
+    background: linear-gradient(to top, rgb(54, 86, 173), rgb(176, 194, 242));
+}
+
+.gradienteinv{
+    background: linear-gradient(to top, rgb(176, 194, 242), rgb(45, 77, 163));
+}
+.gradiente2{
+    background: linear-gradient(to top, rgb(54, 86, 173), rgb(16, 52, 150));
+}
+
+.transformacion:hover{
+    transform: translate(-5px, 5px);
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+.transformacion2:hover{
+    transform: translate(-10px, 10px);
+    cursor: grab;
+    transition-duration: 3s;
+}
+
+/* Animaciones */
+@keyframes textAlpha{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+li{
+    animation-name: textAlpha;
+    animation-duration: 4s;
+}
+
+.logoAnimado{
+    animation-name: textAlpha;
+    animation-duration: 4s;
+}
+
+nav ul li a{
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+		}
+
+		nav ul li a:hover{
+			color: rgb(12, 53, 70);
+			font-weight: 600;
+			background-size: 100% 2px;
+		}
+
+
+
+
+@media only screen and (min-width: 768px)  {
+    .contenedorGrid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nav nav nav"
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+
+
+.headerimgSize{
+    width: 99%;
+    height: 100%;
+}
+
+.iframeimgSize
+{
+    width: auto;
+    height: auto;
+}
+
+}
+
+
